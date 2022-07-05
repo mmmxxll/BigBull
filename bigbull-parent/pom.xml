@@ -18,27 +18,51 @@
 	</parent>
 	<!-- 设置项目父级依赖：Spring Boot Starter Parent [END]-->
 
-
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<spring-cloud-dependencies.version>2021.0.3</spring-cloud-dependencies.version>
+		<druid-spring-boot-stater.version>1.2.11</druid-spring-boot-stater.version>
+		<mybatis-spring-boot-starter.version>2.2.2</mybatis-spring-boot-starter.version>
+		<mybatis-plus-boot-starter.version>3.5.2</mybatis-plus-boot-starter.version>
+		<pagehelper-spring-boot-starter.version>1.4.3</pagehelper-spring-boot-starter.version>
+		<lombok.version>1.18.24</lombok.version>
+		<mapstruct.version>1.5.2.Final</mapstruct.version>
+		<hutool-all.version>5.8.4</hutool-all.version>
 	</properties>
 
 	<dependencies>
+
+		<!-- 配置依赖：Spring Boot Starter Web [BEGIN] -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- 配置依赖：Spring Boot Starter Web [BEGIN] -->
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- 配置依赖：Spring Cloud Dependencies [BEGIN] -->
+
+			<!-- 配置依赖：Spring Cloud Dependencies [END] -->
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<pluginManagement>
 			<plugins>
 				<plugin>
+					<!-- 配置依赖：Spring Boot Maven Plugin [BEGIN] -->
+
+					<!-- 配置依赖：Spring Boot Maven Plugin [END] -->
 					<artifactId>maven-clean-plugin</artifactId>
 					<version>3.1.0</version>
 				</plugin>
